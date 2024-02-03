@@ -1,0 +1,478 @@
+[
+  {
+    "id": "f1",
+    "image": "image-1.jpg",
+    "title": "Дополнение к букету",
+    "price": 99,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": true,
+    "size": {
+      "sizeOne": 300000,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f2",
+    "image": "image-2.jpg",
+    "title": "Букет номер 2",
+    "price": 1900,
+    "isSeason": true,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f3",
+    "image": "image-3.jpg",
+    "title": "Букет номер 3",
+    "price": 2100,
+    "isSeason": true,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f4",
+    "image": "image-4.jpg",
+    "title": "Букет номер 4",
+    "price": 1200,
+    "isSeason": true,
+    "isNew": true,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f5",
+    "image": "image-5.jpg",
+    "title": "Букет номер 5",
+    "price": 4500,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f6",
+    "image": "image-6.jpg",
+    "title": "Букет номер 6",
+    "price": 3500,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": true,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f7",
+    "image": "image-7.jpg",
+    "title": "Букет номер 7",
+    "price": 1600,
+    "isSeason": true,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f8",
+    "image": "image-8.jpg",
+    "title": "Букет номер 8",
+    "price": 800,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f9",
+    "image": "image-9.jpg",
+    "title": "Букет номер 9",
+    "price": 1000,
+    "isSeason": false,
+    "isNew": true,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f10",
+    "image": "image-10.jpg",
+    "title": "Букет номер 10",
+    "price": 1600,
+    "isSeason": true,
+    "isNew": false,
+    "isSale": true,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f11",
+    "image": "image-11.jpg",
+    "title": "Букет номер 11",
+    "price": 5700,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f12",
+    "image": "image-12.jpg",
+    "title": "Букет номер 12",
+    "price": 7400,
+    "isSeason": false,
+    "isNew": true,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f13",
+    "image": "image-13.jpg",
+    "title": "Букет номер 13",
+    "price": 3200,
+    "isSeason": true,
+    "isNew": false,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f14",
+    "image": "image-14.jpg",
+    "title": "Букет номер 14",
+    "price": 2500,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": true,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f15",
+    "image": "image-15.jpg",
+    "title": "Букет номер 15",
+    "price": 3200,
+    "isSeason": false,
+    "isNew": true,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f16",
+    "image": "image-16.jpg",
+    "title": "Букет номер 16",
+    "price": 1900,
+    "isSeason": false,
+    "isNew": true,
+    "isSale": false,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "f17",
+    "image": "image-17.jpg",
+    "title": "Букет номер 17",
+    "price": 1950,
+    "isSeason": false,
+    "isNew": false,
+    "isSale": true,
+    "size": {
+      "sizeOne": 30,
+      "sizeTwo": 25,
+      "sizeThree": 30
+    },
+    "composition": [
+      {
+        "name": "Rose",
+        "count": 3
+      },
+      {
+        "name": "Lily",
+        "count": 5
+      },
+      {
+        "name": "Gerber",
+        "count": 3
+      }
+    ]
+  }
+]

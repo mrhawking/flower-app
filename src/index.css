@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Cormorant+Garamond:ital,wght@0,700;1,400;1,600&family=Rubik:wght@300;400;500&display=swap');
+
+
+/* font-family: 'Cormorant Garamond', serif; */
+
+
+:root {
+  --main-text-color: rgb(68, 68, 68);
+  --main-text-color-10: rgba(68, 68, 68, 0.1);
+  --accent-color: rgb(75, 180, 94);
+  --accent-color-dark: rgb(64, 112, 20);
+  --main-light-100: rgba(255, 255, 255, 1);
+  --main-light-90: rgba(255, 255, 255, 0.9);
+  --main-light-64: rgba(255, 255, 255, 0.64);
+  --accent-second-color: rgb(245, 95, 85);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  color: var(--main-text-color);
+}
+
+body {
+	text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+}
+
+a {
+  display: inline-block;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+.container {
+	max-width: 1160px;
+	padding: 0 25px;
+	margin: 0 auto;
+
+	/* @media (max-width: 375px) {
+		max-width: 375px;
+		padding: 0 23px;
+	} */
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,11 @@
+.catalogBlock {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.catalogList {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) );
+  column-gap: 75px;
+  row-gap: 30px;
+}

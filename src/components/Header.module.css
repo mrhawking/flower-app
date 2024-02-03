@@ -1,0 +1,110 @@
+.mainHeader {
+  font-weight: 400;
+}
+
+.mainHeader a {
+  color: var(--main-text-color);
+}
+
+.headerInner {
+  /* для мобилки понадобится */
+}
+
+.mainNav {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--main-text-color-10);
+}
+
+.siteNav {
+}
+.navToggle {
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 0;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.navList li a {
+  padding: 16px 0;
+}
+
+.navList li a:hover,
+.navList li a:focus,
+.navList li a:active  {
+  color: var(--accent-color);
+}
+
+.userNav {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 25px;
+  padding-left: 30px;
+  border-left: 1px solid var(--main-text-color-10);
+}
+
+.userNav li a{
+  padding: 16px 0;
+}
+
+.userNav li a:hover,
+.userNav li a:focus,
+.userNav li a:active {
+  color: var(--accent-color);
+}
+
+.userNav .favorites {
+  padding-left: 38px;
+  background-image: url("../assets/icons/heart.svg");
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 12px;
+}
+
+.userNav .cart {
+  padding-left: 44px;
+  background-image: url("../assets/icons/shopping-cart.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 32px 28px;
+  font-size: 16px;
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 15px 0;
+}
+.logo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+.logo img {
+  width: 206px;
+  height: 42px;
+}
+
+.logo span:hover {
+  color: var(--accent-color);
+}
+
+.phone {
+  line-height: 1.4;
+  font-size: 20px;
+}
+.hours {
+  font-size: 14px;
+}

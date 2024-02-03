@@ -1,0 +1,55 @@
+.flower {
+  position: relative;
+  text-align: center;
+}
+
+.flower a {
+  width: 100%;
+}
+
+.imgWrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.flower img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 290px;
+}
+.price {
+  color: var(--accent-color);
+  font-size: 34px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: 300;
+  color: var(--main-text-color);
+ margin-bottom: 20px;
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.favoriteBtn svg {
+  fill: #F5C4C4;
+}
+
+.favoriteBtnChosen svg{
+  fill: var(--accent-second-color);
+}
+
+.onSale {
+  padding-left: 10px;
+  color: #C0C0C0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: line-through;
+}
