@@ -5,6 +5,13 @@
 
 .flower a {
   width: 100%;
+  outline: none;
+}
+
+.flower a:focus {
+  -webkit-box-shadow: 0px 0px 28px 8px var(--accent-color-64);
+  -moz-box-shadow: 0px 0px 28px 8px var(--accent-color-64);
+  box-shadow: 0px 0px 15px 5px var(--accent-color-64);
 }
 
 .imgWrapper {
@@ -17,17 +24,30 @@
   width: 100%;
   max-height: 290px;
 }
+
 .price {
+  margin-bottom: 10px;
+}
+
+.activePrice {
   color: var(--accent-color);
   font-size: 34px;
   font-weight: 300;
-  margin-bottom: 10px;
+}
+
+.prevPrice {
+  padding-left: 10px;
+  color: var(--text-gray);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: line-through;
 }
 
 .title {
   font-weight: 300;
   color: var(--main-text-color);
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .favoriteBtn {
@@ -41,15 +61,11 @@
   fill: #F5C4C4;
 }
 
-.favoriteBtnChosen svg{
-  fill: var(--accent-second-color);
+.favoriteBtn:hover,
+.favoriteBtn:focus {
+  transform: scale(1.5);
 }
 
-.onSale {
-  padding-left: 10px;
-  color: #C0C0C0;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-decoration: line-through;
+.favoriteBtnChosen svg {
+  fill: var(--accent-second-color);
 }

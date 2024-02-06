@@ -1,0 +1,49 @@
+.orderForm {
+  padding: 30px;
+  background-color: var(--main-gray-20);
+  border-radius: 10px;
+}
+
+.formTitle {
+  font-family: "Cormorant Garamond";
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.total {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.total tr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.total tr:last-child {
+  margin-bottom: 0;
+}
+
+.discount {
+  color: var(--accent-second-color);
+}
+
+.totalPrice {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.customerData {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 30px;
+}
+
+.orderButton {
+  width: 100%;
+}

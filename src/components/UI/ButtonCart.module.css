@@ -8,3 +8,35 @@
   padding: 15px 20px;
   border-radius: 5px;
 }
+
+.button:hover,
+.button:focus {
+  background-color: var(--accent-color-hover);
+}
+
+.button:active {
+  background-color: var(--accent-color-64);
+}
+
+
+/* Есть смысл это сделать только если товары из корзины будут где-то хараниться. 
+на серваке ли  еще где, чтобы можно было даже при обновлении страницы считать
+данные - есть товар в корзине или нет. */
+
+/* .button.clicked {
+  position: relative;
+  color: var(--accent-color);
+  background-color: var(--main-light-100);
+  font-size: 16px;
+  border: 1px solid var(--accent-color);
+  padding-left: 20px;
+}
+
+.button.clicked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/icons/check.svg");
+} */

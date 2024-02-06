@@ -6,13 +6,19 @@
 
 :root {
   --main-text-color: rgb(68, 68, 68);
+  --main-text-color-48: rgba(68, 68, 68, 0.48);
   --main-text-color-10: rgba(68, 68, 68, 0.1);
   --accent-color: rgb(75, 180, 94);
+  --accent-color-64: rgba(75, 180, 94, 0.64);
+  --accent-color-hover: rgb(65, 155, 82);
   --accent-color-dark: rgb(64, 112, 20);
   --main-light-100: rgba(255, 255, 255, 1);
   --main-light-90: rgba(255, 255, 255, 0.9);
   --main-light-64: rgba(255, 255, 255, 0.64);
+  --text-gray: rgb(192, 192, 192);
+  --main-gray-20: rgba(224, 222, 186, 0.2);
   --accent-second-color: rgb(245, 95, 85);
+  --warning-message: rgba(246, 200, 36, 0.2);
 }
 
 * {
@@ -54,7 +60,7 @@ a:hover {
 }
 
 ul,
-ul li {
+li {
   list-style: none;
 }
 

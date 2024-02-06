@@ -1,0 +1,89 @@
+.cartItem {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 30px 2fr 4fr 2fr 3fr;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--main-text-color-10);
+}
+
+.imgWrapper {
+  width: 100%;
+}
+
+.imgWrapper img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+}
+
+.deleteButton {
+  background-color: transparent;
+}
+
+
+.deleteButton svg {
+  fill: var(--main-text-color);
+  opacity: 0.4;
+}
+
+.deleteButton:hover svg {
+  opacity: 1;
+}
+
+.title a {
+  color: var(--main-text-color);
+}
+
+.actions {
+  display: flex;
+  column-gap: 10px;
+}
+
+.actions input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid var(--main-text-color-10);
+  border-radius: 6px;
+}
+
+.actions button {
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  line-height: 1;
+  background-color: var(--accent-color-64);
+  border: 1px solid var(--accent-color-64);
+  color: var(--main-light-100);
+}
+
+.actions button:hover {
+  background-color: var(--accent-color);
+}
+
+.actions button:disabled {
+  border-color: var(--text-gray);
+  background-color: var(--text-gray);
+  cursor: default;
+}
+
+.price span {
+  display: block;
+  text-align: right;
+}
+
+.currentPrice {
+  color: var(--accent-color);
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.catalogPrice {
+
+  color: var(--text-gray);
+  font-size: 16px;
+
+  font-weight: 300;
+  line-height: 1.5;
+  text-decoration: line-through;
+}
