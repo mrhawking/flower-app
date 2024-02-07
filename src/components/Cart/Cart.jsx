@@ -20,30 +20,32 @@ export default function Cart() {
   }
 
   return (
-    <section className={classes.cart}>
-      <div className="container">
-        <h2 className={classes.title}>Корзина</h2>
-        {flowersCart.length === 0 && (
-          <div className={classes.emptyCart}>
-            <p>В вашей корзине пусто</p>
+    <>
+      <section className={classes.cart}>
+        <div className="container">
+          <h2 className={classes.title}>Корзина</h2>
+          {flowersCart.length === 0 && (
+            <div className={classes.emptyCart}>
+              <p>В вашей корзине пусто</p>
+            </div>
+          )}
+          {flowersCart.length > 0 && (<div className={classes.cartInner}>
+            <ul className={classes.cartList}>
+              {flowersCart.map(flower => (
+                <CartItem
+                  flower={flower}
+                  key={flower.id}
+                  addItem={handleAddItem}
+                  removeItem={handleRemoveItem}
+                  removeEntireItem={handleRemoveEntireItem}
+                />
+              ))}
+            </ul>
+            <OrderForm />
           </div>
-        )}
-        {flowersCart.length > 0 && (<div className={classes.cartInner}>
-          <ul className={classes.cartList}>
-            {flowersCart.map(flower => (
-              <CartItem
-                flower={flower}
-                key={flower.id}
-                addItem={handleAddItem}
-                removeItem={handleRemoveItem}
-                removeEntireItem={handleRemoveEntireItem}
-              />
-            ))}
-          </ul>
-          <OrderForm flowersCart={flowersCart}/>
+          )}
         </div>
-        )}
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

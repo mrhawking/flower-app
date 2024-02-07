@@ -34,3 +34,21 @@ export async function updateFavoriteFlowersIds(flowers) {
 
   return data.message;
 }
+
+export async function createOrder(order) {
+  const response = await fetch('http://localhost:3000/orders', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(order)
+  });
+
+  const data = response.json()
+
+  if (!response.ok) {
+    throw new Error('Ошибка при создании заказа');
+  }
+
+  return data;
+}

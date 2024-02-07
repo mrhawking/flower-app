@@ -6,6 +6,7 @@
 .flower a {
   width: 100%;
   outline: none;
+  margin-bottom: 10px;
 }
 
 .flower a:focus {
@@ -61,8 +62,15 @@
   fill: #F5C4C4;
 }
 
-.favoriteBtn:hover,
+.favoriteBtn:hover {
+  transform: scale(1.5);
+}
+
 .favoriteBtn:focus {
+  transform: scale(1.2);
+}
+
+.favoriteBtn:active {
   transform: scale(1.5);
 }
 

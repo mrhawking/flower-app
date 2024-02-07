@@ -1,0 +1,11 @@
+.modal {
+  margin: auto auto;
+  padding: 50px;
+  border-radius: 10px;
+  border: 1px solid var(--main-text-color);
+  text-align: center;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}

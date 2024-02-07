@@ -4,7 +4,6 @@ import CatalogItem from './CatalogItem';
 import classes from './catalogBlock.module.css';
 import FavoriteContext from '../../store/FavoriteContext';
 
-
 export default function CatalogBlock() {
   const [availableFlowers, setAvailableFlowers] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
@@ -50,19 +49,3 @@ export default function CatalogBlock() {
     </>
   );
 }
-// export default function CatalogBlock({ flowers, favorites, onchangeFavorite }) {
-
-//   return (
-//     <div className={classes.catalogBlock}>
-//       <ul className={classes.catalogList}>
-//         {flowers.map((flower) => (
-//           <CatalogItem
-//             key={flower.id}
-//             onchangeFavorite={onchangeFavorite}
-//             isFavorite={favorites.some((favFlower) => flower.id === favFlower.id)}
-//             flower={flower}/>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }

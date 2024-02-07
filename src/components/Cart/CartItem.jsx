@@ -21,7 +21,7 @@ export default function CartItem({ flower, addItem, removeItem, removeEntireItem
       </p>
       <div className={classes.actions}>
         <button onClick={() => removeItem(flower.id)} disabled={flower.quantity === 1}>-</button>
-        <input type="text" name="count" id="count" value={flower.quantity}/>
+        <input type="text" name="count" id="count" value={flower.quantity} readOnly/>
         <label className="visually-hidden" htmlFor="count">Количество товара</label>
         <button onClick={() => addItem(flower)}>+</button>
       </div>
