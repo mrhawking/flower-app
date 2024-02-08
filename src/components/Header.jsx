@@ -1,7 +1,15 @@
 import classes from "./Header.module.css";
 import logo from '../assets/logo.png';
+import { useContext } from "react";
+import CartContext from "../store/CartContext";
+import { countFullSalePrice } from "../util/util";
+import { currencyFormatter } from "./util/format";
 
 export default function Header() {
+  const { items: flowersCart } = useContext(CartContext);
+
+  const fullSalePrice = countFullSalePrice(flowersCart);
+
   return (
     <header className={classes.mainHeader}>
       <div className={`${classes.headerInner} container`}>
@@ -40,13 +48,16 @@ export default function Header() {
               <a className={classes.favorites} href="#">Избранное</a>
             </li>
             <li>
-              <a className={classes.cart} href="#"><span className="visually-hidden">Корзина</span>0 Р</a>
+              <a className={classes.cart} href="#">
+                <span className="visually-hidden">Корзина</span>
+                {currencyFormatter.format(fullSalePrice)}
+              </a>
             </li>
           </ul>
         </nav>
         <div className={classes.contacts}>
           <a href="#" className={classes.logo}>
-            <img src={logo} alt="logo" width={206} height={42}/>
+            <img src={logo} alt="logo" width={206} height={42} />
             <span>сеть цветочных оптово-розничных центров</span>
           </a>
           <p className={classes.phone}><a href="tel:+79651511839"> +7 965 151 18 39</a></p>
