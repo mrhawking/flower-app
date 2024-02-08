@@ -1,0 +1,25 @@
+.emblem {
+  display: inline-block;
+  padding: 6px 20px 6px 40px;
+  color: var(--main-light-100);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  border: 2px solid var(--main-light-100);
+  border-radius: 22px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 15px 15px;
+}
+
+.emblemSale {
+  background-color: var(--accent-second-color);
+  background-image: url("./../../assets/icons/sale.svg");
+}
+
+.emblemNew {
+  background-color: var(--accent-color);
+  background-image: url("./../../assets/icons/seedling.svg");
+}

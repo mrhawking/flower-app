@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={classes.footerInner}>
           <p className={classes.logo}>
             <img src={logo} alt="Logo" width={190} height={40}/>
-            <span>© ФлораМаркт, 2012-2020</span>
+            <span>© ФлораМаркт, 2012-2024</span>
           </p>
           <p className={classes.phone}><a href="tel:+79651511839"> +7 965 151 18 39</a></p>
           <p className={classes.links}>

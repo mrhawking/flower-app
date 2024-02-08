@@ -16,9 +16,9 @@ export default function CartItem({ flower, addItem, removeItem, removeEntireItem
       <div className={classes.imgWrapper}>
         <img src={`http://localhost:3000/images/${flower.image}`} alt={flower.title} />
       </div>
-      <p className={classes.title}>
+      <h3 className={classes.title}>
         <a href="#">{flower.title}</a>
-      </p>
+      </h3>
       <div className={classes.actions}>
         <button onClick={() => removeItem(flower.id)} disabled={flower.quantity === 1}>-</button>
         <input type="text" name="count" id="count" value={flower.quantity} readOnly/>

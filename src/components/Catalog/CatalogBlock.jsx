@@ -33,7 +33,7 @@ export default function CatalogBlock() {
     <>
       {isFetching && <p>ЗАГРУЗКА!!!!!</p>}
       {error && <p>ОШИБКА</p>}
-      {!isFetching && !error && availableFlowers.length === 0 && 'Похоже нет подходящих вариантов'}
+      {!isFetching && !error && availableFlowers.length === 0 && <p>Похоже нет подходящих вариантов</p>}
       {!isFetching && !error && availableFlowers.length > 0 && (
         <div className={classes.catalogBlock}>
           <ul className={classes.catalogList}>

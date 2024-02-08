@@ -68,7 +68,7 @@ export default function OrderForm() {
     <>
       <Modal open={modalIsOpen} onClose={handleCloseModal}>
         <div>
-          <h2 className={classes.modalTitle}>Отлично!</h2>
+          <h2 className="title">Отлично!</h2>
           <p className={classes.modalText}>Ваш заказ был успешно создан.</p>
           <p className={classes.modalText}>Наш менеджер свяжется с вами в течение 5 минут для уточнения деталей.</p>
           <ButtonCart onClick={handleCloseModal} className={classes.modalBtn}>OK</ButtonCart>

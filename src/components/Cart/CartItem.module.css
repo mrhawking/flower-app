@@ -31,7 +31,12 @@
   opacity: 1;
 }
 
+.title:hover a{
+  text-decoration: underline;
+}
+
 .title a {
+  font-weight: 400;
   color: var(--main-text-color);
 }
 

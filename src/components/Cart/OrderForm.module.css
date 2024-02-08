@@ -48,15 +48,6 @@
   width: 100%;
 }
 
-.modalTitle{
-  text-align: center;
-  font-family: "Cormorant Garamond";
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
 .modalText {
   margin-bottom: 30px;
   font-size: 20px;

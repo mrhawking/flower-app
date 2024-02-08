@@ -5,6 +5,7 @@ import Slogan from "./components/Slogan";
 import Cart from "./components/Cart/Cart";
 import { FavoriteContextProvider } from "./store/FavoriteContext";
 import { CartContextProvider } from "./store/CartContext";
+import Favorites from "./components/Favorites";
 
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
     <CartContextProvider>
       <FavoriteContextProvider>
         <Header />
-        <main>
+        <main className="main">
           <Slogan />
+          <Favorites />
           <Cart />
           <Catalog />
         </main>

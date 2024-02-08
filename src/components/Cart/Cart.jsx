@@ -23,7 +23,7 @@ export default function Cart() {
     <>
       <section className={classes.cart}>
         <div className="container">
-          <h2 className={classes.title}>Корзина</h2>
+          <h2 className="title">Корзина</h2>
           {flowersCart.length === 0 && (
             <div className={classes.emptyCart}>
               <p>В вашей корзине пусто</p>

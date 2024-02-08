@@ -37,12 +37,20 @@ html {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: var(--main-text-color);
+  min-height: 100vh;
 }
 
 body {
 	text-size-adjust: none;
 	-ms-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content;
 }
 
 a {
@@ -115,6 +123,11 @@ legend {
   display: block;
 }
 
+.main {
+  margin-top: 135px;
+  flex-grow: 1;
+}
+
 .container {
 	max-width: 1160px;
 	padding: 0 25px;
@@ -141,4 +154,13 @@ legend {
 
 .hidden {
 	display: none;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
 }
