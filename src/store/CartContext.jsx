@@ -3,27 +3,36 @@ import { createContext, useReducer } from "react";
 const CartContext = createContext({
   items: [],
   // eslint-disable-next-line no-unused-vars
-  addItem: (item) => { },
+  addItem: (item, count) => { },
   // eslint-disable-next-line no-unused-vars
   removeItem: (id) => { },
-  clearCart: () => { }
+  clearCart: () => { },
+  // eslint-disable-next-line no-unused-vars
+  removeEntireItem: (id) => { }
 });
+
+// const flower2 = {
+//   ...flower1,
+//   size: { ...flower1.size },
+//   composition: flower1.composition.map((item) => ({ ...item })),
+// };
 
 
 function cartReducer(state, action) {
   if (action.type === 'ADD_ITEM') {
-    const existingItemIndex = state.items.findIndex(item => item.id === action.item.id);
+    const existingItemIndex = state.items.findIndex(item => item.id === action.payload.item.id);
+    // const updatedItems = state.items.map(item => ({ ...item, size: { ...item.size }, composition: item.composition.map(comp => ({ ...comp })) }));
     const updatedItems = [...state.items]
 
     if (existingItemIndex > -1) {
       const existingItem = state.items[existingItemIndex]
       const updatedItem = {
         ...existingItem,
-        quantity: existingItem.quantity + 1
+        quantity: existingItem.quantity + action.payload.count
       }
       updatedItems[existingItemIndex] = updatedItem;
     } else {
-      updatedItems.push({ ...action.item, quantity: 1 })
+      updatedItems.push({ ...action.payload.item, quantity: action.payload.count })
     }
 
     return { ...state, items: updatedItems };
@@ -61,8 +70,8 @@ function cartReducer(state, action) {
 export function CartContextProvider({ children }) {
   const [cart, dispatch] = useReducer(cartReducer, { items: [] });
 
-  function addItem(item) {
-    dispatch({ type: 'ADD_ITEM', item: item });
+  function addItem(item, count) {
+    dispatch({ type: 'ADD_ITEM', payload: {item: item, count: count} });
   }
   function removeItem(id) {
     dispatch({ type: 'REMOVE_ITEM', id: id });

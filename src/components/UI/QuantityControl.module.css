@@ -1,0 +1,32 @@
+.actions {
+  display: flex;
+  column-gap: 10px;
+}
+
+.actions input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid var(--main-text-color-10);
+  border-radius: 6px;
+  cursor: default;
+}
+
+.actions button {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  line-height: 1;
+  background-color: var(--accent-color-64);
+  border: 1px solid var(--accent-color-64);
+  color: var(--main-light-100);
+}
+
+.actions button:hover {
+  background-color: var(--accent-color);
+}
+
+.actions button:disabled {
+  border-color: var(--text-gray);
+  background-color: var(--text-gray);
+  cursor: default;
+}

@@ -5,19 +5,7 @@ import { useContext } from 'react';
 import CartContext from '../../store/CartContext';
 
 export default function Cart() {
-  const { items: flowersCart, addItem, removeItem, removeEntireItem } = useContext(CartContext);
-
-  function handleAddItem(flower) {
-    addItem(flower);
-  }
-
-  function handleRemoveItem(flowerId) {
-    removeItem(flowerId);
-  }
-
-  function handleRemoveEntireItem(flowerId) {
-    removeEntireItem(flowerId);
-  }
+  const { items: flowersCart } = useContext(CartContext);
 
   return (
     <>
@@ -35,9 +23,6 @@ export default function Cart() {
                 <CartItem
                   flower={flower}
                   key={flower.id}
-                  addItem={handleAddItem}
-                  removeItem={handleRemoveItem}
-                  removeEntireItem={handleRemoveEntireItem}
                 />
               ))}
             </ul>

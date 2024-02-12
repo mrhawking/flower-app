@@ -1,0 +1,136 @@
+.flowerItem {
+padding: 65px 0;
+}
+
+.flowerItemInner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 65px;
+}
+
+.imgWrapper {}
+
+.imgWrapper img{
+  object-fit: contain;
+  height: 100%;
+}
+
+.description {
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: "Cormorant Garamond";
+  font-size: 38px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.priceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price {}
+
+.activePrice {
+  color: var(--accent-color);
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.prevPrice {
+  padding-left: 10px;
+  color: var(--text-gray);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: line-through;
+}
+
+.favoriteBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.favoriteBtn svg {
+  fill: #ee8f8f;
+}
+
+.favoriteBtnChosen {
+  background-color: var(--accent-second-color);
+  border-radius: 50%;
+}
+
+.favoriteBtnChosen svg {
+  fill: #ffffff;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.propertiesList {
+  
+}
+
+
+.propertiesList dt{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.propertiesList dd{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.itemWrapper {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid var(--main-text-color-10);
+}
+
+.composition li{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+
+.payment {
+  display: flex;
+  gap: 20px;
+}
+
+.payment li {
+  padding-top: 24px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.payment .cash {
+  background-size: 30px 24px;
+  background-image: url("../assets/icons/money.svg");
+}
+.payment .card {
+  background-size: 27px 24px;
+  background-image: url("../assets/icons/credit-card.svg");
+}
+.payment .bank {
+  background-size: 24px 24px;
+  background-image: url("../assets/icons/bank.svg");
+}

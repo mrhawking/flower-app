@@ -6,6 +6,7 @@ import Cart from "./components/Cart/Cart";
 import { FavoriteContextProvider } from "./store/FavoriteContext";
 import { CartContextProvider } from "./store/CartContext";
 import Favorites from "./components/Favorites";
+import SingleItem from "./components/SingleItem";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <main className="main">
           <Slogan />
+          <SingleItem />
           <Favorites />
           <Cart />
           <Catalog />

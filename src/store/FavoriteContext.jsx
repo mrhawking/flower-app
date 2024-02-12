@@ -42,6 +42,7 @@ export function FavoriteContextProvider({ children }) {
   }
 
   function handleStatus(flowerId, isFavorite) {
+    console.log(flowerId, isFavorite)
     if (!isFavorite) {
       addFavoriteId(flowerId);
     } else {

@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   background-color: var(--accent-color);
   color: var(--main-light-100);
   font-family: 'Roboto', sans-serif;
@@ -18,25 +19,44 @@
   background-color: var(--accent-color-64);
 }
 
-
-/* Есть смысл это сделать только если товары из корзины будут где-то хараниться. 
-на серваке ли  еще где, чтобы можно было даже при обновлении страницы считать
-данные - есть товар в корзине или нет. */
-
-/* .button.clicked {
+.button.clicked {
+  padding-left: 40px;
   position: relative;
   color: var(--accent-color);
   background-color: var(--main-light-100);
-  font-size: 16px;
+  font-size: 18px;
   border: 1px solid var(--accent-color);
-  padding-left: 20px;
+  background-image: url("../../assets/icons/check.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+  cursor: default;
 }
 
-.button.clicked::before {
+/* Message: Подумать насчет анимации */
+
+/* .button.animate::before {
   content: "";
+  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/icons/check.svg");
+  background-color: blueviolet;
+  animation: tocart 2s ease-in-out;
+}
+
+@keyframes tocart {
+  0% {
+    opacity: 1;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    opacity: 0;
+    top: -200%;
+    right: -100%;
+    width: 5px;
+    height: 5px;
+  }
 } */

@@ -1,9 +1,20 @@
 import classes from './CartItem.module.css';
 import { currencyFormatter } from '../util/format';
+import QuantityControl from '../UI/QuantityControl';
+import { useContext } from 'react';
+import CartContext from '../../store/CartContext';
 
-export default function CartItem({ flower, addItem, removeItem, removeEntireItem }) {
+export default function CartItem({ flower }) {
+  const { addItem, removeItem, removeEntireItem } = useContext(CartContext);
   const fullCatalogPrice = currencyFormatter.format(flower.price * flower.quantity);
   const saleFullPrice = flower.isSale && currencyFormatter.format((flower.price * flower.quantity) * 90 / 100)
+
+  function handleAdd() {
+    addItem(flower, 1);
+  }
+  function handleRemove() {
+    removeItem(flower.id)
+  }
 
   return (
     <li className={classes.cartItem}>
@@ -19,12 +30,13 @@ export default function CartItem({ flower, addItem, removeItem, removeEntireItem
       <h3 className={classes.title}>
         <a href="#">{flower.title}</a>
       </h3>
-      <div className={classes.actions}>
-        <button onClick={() => removeItem(flower.id)} disabled={flower.quantity === 1}>-</button>
+      {/* <div className={classes.actions}>
+        <button onClick={handleRemove} disabled={flower.quantity === 1}>-</button>
         <input type="text" name="count" id="count" value={flower.quantity} readOnly/>
         <label className="visually-hidden" htmlFor="count">Количество товара</label>
-        <button onClick={() => addItem(flower)}>+</button>
-      </div>
+        <button onClick={handleAdd}>+</button>
+      </div> */}
+      <QuantityControl item={flower} onDecrease={handleRemove} onIncrease={handleAdd} disabled={flower.quantity === 1} cartInput/>
       <p className={classes.price}>
         <span className={classes.currentPrice}>{flower.isSale ? saleFullPrice : fullCatalogPrice}</span>
         {flower.isSale ? <span className={classes.catalogPrice}>{fullCatalogPrice}</span> : undefined}
