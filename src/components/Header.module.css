@@ -45,10 +45,14 @@
   padding: 16px 0;
 }
 
-.navList li a:hover,
-.navList li a:focus,
-.navList li a:active  {
+.navList li a:hover{
   color: var(--accent-color);
+}
+
+.navList li a.active {
+  color: var(--accent-color);
+  pointer-events: none;
+  cursor: default;
 }
 
 .userNav {
@@ -64,11 +68,16 @@
   padding: 16px 0;
 }
 
-.userNav li a:hover,
-.userNav li a:focus,
-.userNav li a:active {
+.userNav li a:hover {
   color: var(--accent-color);
 }
+
+.userNav li a.active {
+  color: var(--accent-color);
+  pointer-events: none;
+  cursor: default;
+}
+
 
 .userNav .favorites {
   padding-left: 38px;
@@ -104,10 +113,6 @@
 .logo img {
   width: 206px;
   height: 42px;
-}
-
-.logo span:hover {
-  color: var(--accent-color);
 }
 
 .phone {

@@ -1,33 +1,13 @@
-import { useState, useEffect, useContext } from "react";
-import { fetchAvailableFlowers, fetchFavoriteFlowers } from "../../http.js";
+import { useContext } from "react";
 import CatalogItem from './CatalogItem';
 import classes from './catalogBlock.module.css';
 import FavoriteContext from '../../store/FavoriteContext';
 
-export default function CatalogBlock() {
-  const [availableFlowers, setAvailableFlowers] = useState([]);
-  const [isFetching, setIsFetching] = useState(false);
-  const [error, setError] = useState();
-  const { favorites, setFavoriteIds } = useContext(FavoriteContext);
+export default function CatalogBlock({isFetching, error, availableFlowers}) {
 
-  useEffect(() => {
-    async function getFlowers() {
-      setIsFetching(true);
-      try {
-        const [availableFlowers, favoriteFlowers] = await Promise.all([
-          fetchAvailableFlowers(),
-          fetchFavoriteFlowers()
-        ]);
+  const { favorites } = useContext(FavoriteContext);
 
-        setAvailableFlowers(availableFlowers);
-        setFavoriteIds(favoriteFlowers);
-      } catch (error) {
-        setError(error.message || 'Ошибка загрузки данных');
-      }
-      setIsFetching(false);
-    }
-    getFlowers();
-  }, []);
+
 
   return (
     <>

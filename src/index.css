@@ -12,6 +12,7 @@
   --accent-color-64: rgba(75, 180, 94, 0.64);
   --accent-color-hover: rgb(65, 155, 82);
   --accent-color-dark: rgb(64, 112, 20);
+  --accent-color-lightest: rgb(245, 249, 236);
   --main-light-100: rgba(255, 255, 255, 1);
   --main-light-90: rgba(255, 255, 255, 0.9);
   --main-light-64: rgba(255, 255, 255, 0.64);
@@ -129,7 +130,8 @@ legend {
 }
 
 .container {
-	max-width: 1160px;
+	/* max-width: 1160px; */
+	max-width: 1260px;
 	padding: 0 25px;
 	margin: 0 auto;
 

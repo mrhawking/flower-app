@@ -1,26 +1,24 @@
 import { useContext, useEffect, useState } from 'react';
-import CatalogItem from './Catalog/CatalogItem';
+import CatalogItem from '../components/Catalog/CatalogItem';
 import classes from './Favorites.module.css';
 import FavoriteContext from '../store/FavoriteContext';
-import { fetchAvailableFlowers, fetchFavoriteFlowers } from '../http';
+import { fetchAvailableFlowers } from '../http';
 
-export default function Favorites() {
+export default function FavoritesPage() {
+
+  //Запросит с сервака ТОЛЬКО ТЕ карточки, которые ейсть в favorites
+  // тогда нафиг не нужен будет двойной цикл
   const [availableFlowers, setAvailableFlowers] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState();
-  const { favorites, setFavoriteIds } = useContext(FavoriteContext);
+  const { favorites } = useContext(FavoriteContext);
 
   useEffect(() => {
     async function getFlowers() {
       setIsFetching(true);
       try {
-        const [availableFlowers, favoriteFlowers] = await Promise.all([
-          fetchAvailableFlowers(),
-          fetchFavoriteFlowers()
-        ]);
-
+        const availableFlowers = await fetchAvailableFlowers()
         setAvailableFlowers(availableFlowers);
-        setFavoriteIds(favoriteFlowers);
       } catch (error) {
         setError(error.message || 'Ошибка загрузки данных');
       }

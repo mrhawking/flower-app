@@ -1,38 +1,22 @@
 export async function fetchAvailableFlowers() {
-  const response = await fetch('http://localhost:3000/flowers');
+  const response = await fetch('https://flower-app-b21ff-default-rtdb.europe-west1.firebasedatabase.app/flowers.json');
   const data = await response.json();
   if (!response.ok) {
     throw new Error('Ошибка загрузки карточек букетов');
   }
 
-  return data;
+  const availableFlowers = Object.values(data.flowers);
+
+  return availableFlowers;
 }
 
-export async function fetchFavoriteFlowers() {
-  const response = await fetch('http://localhost:3000/favorite');
+export async function fetchCurrentFlower(flowerId){
+  const response = await fetch(`https://flower-app-b21ff-default-rtdb.europe-west1.firebasedatabase.app/flowers/flowers/${flowerId}.json`);
   const data = await response.json();
   if (!response.ok) {
-    throw new Error('Ошибка загрузки карточек букетов');
+    throw new Error('Ошибка загрузки');
   }
-
   return data;
-}
-
-export async function updateFavoriteFlowersIds(flowers) {
-  const response = await fetch('http://localhost:3000/favorite', {
-    method: 'PUT',
-    body: JSON.stringify(flowers),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error('Ошибка отправки данных');
-  }
-
-  return data.message;
 }
 
 export async function createOrder(order) {

@@ -1,10 +1,10 @@
-import CartItem from './CartItem';
-import OrderForm from './OrderForm';
+import CartItem from '../components/Cart/CartItem';
+import OrderForm from '../components/Cart/OrderForm';
 import classes from './Cart.module.css';
 import { useContext } from 'react';
-import CartContext from '../../store/CartContext';
+import CartContext from '../store/CartContext';
 
-export default function Cart() {
+export default function CartPage() {
   const { items: flowersCart } = useContext(CartContext);
 
   return (

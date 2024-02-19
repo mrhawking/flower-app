@@ -1,8 +1,9 @@
-import classes from './CartItem.module.css';
-import { currencyFormatter } from '../util/format';
-import QuantityControl from '../UI/QuantityControl';
 import { useContext } from 'react';
+import QuantityControl from '../UI/QuantityControl';
 import CartContext from '../../store/CartContext';
+import { currencyFormatter } from '../util/format';
+import classes from './CartItem.module.css';
+import { Link } from 'react-router-dom';
 
 export default function CartItem({ flower }) {
   const { addItem, removeItem, removeEntireItem } = useContext(CartContext);
@@ -25,10 +26,10 @@ export default function CartItem({ flower }) {
         </svg>
       </button>
       <div className={classes.imgWrapper}>
-        <img src={`http://localhost:3000/images/${flower.image}`} alt={flower.title} />
+        <img src={flower.image} alt={flower.title} />
       </div>
       <h3 className={classes.title}>
-        <a href="#">{flower.title}</a>
+        <Link to={`/catalog/${flower.id}`}>{flower.title}</Link>
       </h3>
       {/* <div className={classes.actions}>
         <button onClick={handleRemove} disabled={flower.quantity === 1}>-</button>

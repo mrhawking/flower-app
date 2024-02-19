@@ -1,10 +1,11 @@
-import { currencyFormatter } from '../util/format';
-import ButtonCart from '../UI/ButtonCart';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import ButtonCart from '../UI/ButtonCart';
 import FavoriteContext from '../../store/FavoriteContext';
 import CartContext from '../../store/CartContext';
-import classes from './CatalogItem.module.css';
 import Emblem from '../UI/Emblem';
+import { currencyFormatter } from '../util/format';
+import classes from './CatalogItem.module.css';
 
 export default function CatalogItem({ flower, isFavorite }) {
   const { handleStatus } = useContext(FavoriteContext);
@@ -22,9 +23,9 @@ export default function CatalogItem({ flower, isFavorite }) {
   return (
     <li className={classes.flower}>
       <article className={classes.flowerInner}>
-        <a href="#">
+        <Link to={`/catalog/${flower.id}`}>
           <div className={classes.imgWrapper}>
-            <img src={`http://localhost:3000/images/${flower.image}`} alt={flower.title} />
+            <img src={flower.image} alt={flower.title} />
           </div>
           <p className={classes.price}>
             {salePrice}
@@ -33,7 +34,7 @@ export default function CatalogItem({ flower, isFavorite }) {
           <p className={classes.title}>{flower.title}</p>
           {flower.isSale && <Emblem isSale positionClass={classes.catalogEmblem}>Акция</Emblem>}
           {flower.isNew && <Emblem isNew positionClass={classes.catalogEmblem}>Новинка</Emblem>}
-        </a>
+        </Link>
         <button onClick={() => handleStatus(flower.id, isFavorite)} className={`${classes.favoriteBtn} ${isFavorite && classes.favoriteBtnChosen}`}>
           <span className="visually-hidden">Добавить в избранное</span>
           <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
