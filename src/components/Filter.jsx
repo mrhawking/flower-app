@@ -1,18 +1,23 @@
 import { useRef, useState } from 'react';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
+import ColorCheckboxes from './UI/ColorCheckboxes';
+import BasicSelect from './UI/BasicSelect';
+import SliderRange from './UI/SliderRange';
 import classes from './Filter.module.css';
 
 export default function Filter({ availableFlowers, onChangeFilter }) {
   const saleRef = useRef();
   const newRef = useRef();
-  const sortRef = useRef();
+  const [sortType, setSortType] = useState('default');
   const [minPrice, setMinPrice] = useState(1);
-  const [maxPrice, setMaxPrice] = useState(5000);
+  const [maxPrice, setMaxPrice] = useState(10000);
 
   function handleRangePriceChange([min, max]) {
     setMinPrice(+min);
     setMaxPrice(+max);
+  }
+
+  function handleSortingChange(sortType) {
+    setSortType(sortType);
   }
 
   function handleInputPriceChange(event) {
@@ -31,7 +36,7 @@ export default function Filter({ availableFlowers, onChangeFilter }) {
       isNewChecked: newRef.current.checked,
       minPrice: minPrice,
       maxPrice: maxPrice,
-      sort: sortRef.current.value
+      sort: sortType
     };
 
     let flowers = [...availableFlowers.current.value];
@@ -75,7 +80,8 @@ export default function Filter({ availableFlowers, onChangeFilter }) {
         <h2 className="visually-hidden">Фильтрация товаров</h2>
         <div className={classes.priceFilter}>
           <span>Цена</span>
-          <div className={classes.range}>
+          <SliderRange minPrice={minPrice} maxPrice={maxPrice} onInputChange={handleInputPriceChange} onRangeChange={handleRangePriceChange}/>
+          {/* <div className={classes.range}>
             <label htmlFor="minPrice">от:</label>
             <input
               type="number"
@@ -110,24 +116,18 @@ export default function Filter({ availableFlowers, onChangeFilter }) {
                 }]}
               />
             </div>
-          </div>
-        </div>
-        <div className={classes.inputWrapper}>
-          <input ref={saleRef} type="checkbox" name="sale" id="sale" />
-          <label htmlFor="sale">Со скидкой</label>
-        </div>
-        <div className={classes.inputWrapper}>
-          <input ref={newRef} type="checkbox" name="new" id="new" />
-          <label htmlFor="new">Новинка</label>
+          </div> */}
         </div>
         <div className={classes.sorting}>
-          <select ref={sortRef} name="sort" id="sort">
-            <option value="default">По умолчанию</option>
-            <option value="ascending">По возрастанию</option>
-            <option value="descending">По убыванию</option>
-          </select>
+          <BasicSelect sortType={sortType} name="sort" id="sort" onChange={handleSortingChange}/>
         </div>
-        <button className={classes.formBtn} type="submit">Отправить</button>
+        <div className={classes.inputWrapper}>
+          <ColorCheckboxes label="Со скидкой" ref={saleRef} name="sale" id="sale" />
+        </div>
+        <div className={classes.inputWrapper}>
+          <ColorCheckboxes label="Новинка" ref={newRef} name="new" id="new" />
+        </div>
+        <button className={classes.formBtn} type="submit">Применить</button>
       </form>
     </section>
   );

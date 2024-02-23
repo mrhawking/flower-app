@@ -47,8 +47,6 @@ export default function CatalogItem({ flower, isFavorite }) {
           <ButtonCart onClick={() => handleAddToCart(flower)} type="button">В корзину</ButtonCart>
         )
         }
-
-
       </article>
     </li>
   );

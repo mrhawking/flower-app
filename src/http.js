@@ -5,13 +5,13 @@ export async function fetchAvailableFlowers() {
     throw new Error('Ошибка загрузки карточек букетов');
   }
 
-  const availableFlowers = Object.values(data.flowers);
+  const availableFlowers = Object.values(data);
 
   return availableFlowers;
 }
 
-export async function fetchCurrentFlower(flowerId){
-  const response = await fetch(`https://flower-app-b21ff-default-rtdb.europe-west1.firebasedatabase.app/flowers/flowers/${flowerId}.json`);
+export async function fetchFlower(flowerId){
+  const response = await fetch(`https://flower-app-b21ff-default-rtdb.europe-west1.firebasedatabase.app/flowers/${flowerId}.json`);
   const data = await response.json();
   if (!response.ok) {
     throw new Error('Ошибка загрузки');

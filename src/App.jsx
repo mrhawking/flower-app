@@ -7,6 +7,7 @@ import FavoritesPage from "./pages/Favorites";
 import CartPage from "./pages/Cart";
 import ErrorPage from "./pages/Error";
 import FlowerDetailsPage from "./pages/FlowerDetails";
+import { flowerLoader } from "./loader";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'favorites', element: <FavoritesPage /> },
       { path: 'cart', element: <CartPage /> },
-      { path: 'catalog/:flowerId', element: <FlowerDetailsPage /> },
+      { path: 'catalog/:flowerId', element: <FlowerDetailsPage />, loader: flowerLoader },
     ],
   },
 

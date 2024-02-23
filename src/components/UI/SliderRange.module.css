@@ -1,0 +1,16 @@
+.range label {
+  margin-right: 10px;
+}
+
+.range input {
+  padding: 5px;
+  max-width: 100px;
+}
+
+.range input:first-of-type {
+  margin-right: 10px;
+}
+
+.sliderWrapper {
+  padding: 10px 0 0 0;
+}
