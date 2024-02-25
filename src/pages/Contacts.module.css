@@ -1,3 +1,38 @@
+.contacts {
+  padding: 60px 0;
+}
+
 .contactsInner {
   height: 500px;
+  margin-bottom: 30px;
+}
+
+.mapContainer {
+  height: 100%;
+}
+
+.contactsList {
+  margin-bottom: 15px;
+}
+
+.contactsList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--accent-color-lightest);
+  border-radius: 40px;
+}
+
+.contactsList li span {
+  color: var(--main-text-color);
+  font-weight: 400;
+}
+
+.contactsList li:last-child {
+  margin-bottom: 0;
 }
