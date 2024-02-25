@@ -6,6 +6,11 @@
 .message {
   text-align: center;
   font-size: 26px;
+  padding: 20px;
+  background-color: var(--warning-message);
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 24px;
 }
 
 .favoritesList {

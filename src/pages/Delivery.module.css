@@ -1,0 +1,46 @@
+.delivery {
+  padding: 60px 0;
+}
+
+.deliveryPrice {
+font-size: 17px;
+line-height: 1.5;
+margin-bottom: 30px;
+}
+
+.deliveryPrice caption {
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+
+.deliveryPrice thead{
+  color: var(--accent-color);
+  font-weight: 500;
+  background-color: var(--accent-color-lightest);
+}
+
+.deliveryPrice tr:nth-child(even) {
+  background-color: var(--main-gray-20);
+}
+
+.deliveryPrice td {
+  padding: 10px;
+}
+
+
+.addressesList {
+}
+.addressesList li{
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--accent-color-lightest);
+  border-radius: 40px;
+}
+.addressesList li:last-child{
+  margin-bottom: 0;
+}

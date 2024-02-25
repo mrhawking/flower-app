@@ -14,7 +14,7 @@
 .spinnerInner {
   padding: 30px;
   border-radius: 50%;
-  background-color: rgba(55, 157, 52, 0.719);
+  background-color: var(--main-light-64);
 }
 
 .spinnerContainer {

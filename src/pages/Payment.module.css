@@ -1,0 +1,21 @@
+.payment {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.paymentList li{
+  margin-bottom: 30px;
+  list-style: decimal;
+}
+.text {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.banksList li{
+  margin-bottom: 15px;
+  list-style: disc;
+}
+.electronicMoneyList li{
+  margin-bottom: 15px;
+  list-style: disc;
+}

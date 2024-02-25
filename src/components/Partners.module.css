@@ -1,0 +1,19 @@
+.partners {
+padding: 40px 0;
+}
+
+.partnersList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.partnersList li {
+  height: 50px;
+}
+
+.partnersList li img {
+  height: 100%;
+  object-fit: contain;
+}

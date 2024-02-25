@@ -1,0 +1,17 @@
+.addresses {
+  background-color: var(--accent-second-light);
+}
+
+.addressesInner {
+  padding: 40px 0;
+}
+
+.addressesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.addressesList li {
+  font-size: 20px;
+}

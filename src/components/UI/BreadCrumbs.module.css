@@ -1,0 +1,17 @@
+.breadCrumbs {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.breadCrumbs li {
+  color: var(--text-gray);
+}
+
+.breadCrumbs a {
+  color: var(--main-text-color);
+}
+
+.breadCrumbs a:hover {
+  text-decoration: underline;
+}

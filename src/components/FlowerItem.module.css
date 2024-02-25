@@ -2,24 +2,11 @@
   padding: 65px 0;
 }
 
-.breadCrumbs ul li{
-margin-bottom: 5px;
-}
-
-.breadCrumbs a{
-  color: var(--text-gray);
-}
-
-.breadCrumbs a:hover{
-  text-decoration: underline;
-}
-
 .flowerItemInner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 65px;
 }
-
 
 .imgWrapper img {
   object-fit: contain;

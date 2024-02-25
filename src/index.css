@@ -19,6 +19,7 @@
   --text-gray: rgb(192, 192, 192);
   --main-gray-20: rgba(224, 222, 186, 0.2);
   --accent-second-color: rgb(245, 95, 85);
+  --accent-second-light: rgb(255, 245, 245);
   --warning-message: rgba(246, 200, 36, 0.2);
 }
 
@@ -42,9 +43,9 @@ html {
 }
 
 body {
-	text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   min-height: 100vh;
 }
 
@@ -130,39 +131,62 @@ legend {
 }
 
 .container {
-	/* max-width: 1160px; */
-	max-width: 1260px;
-	padding: 0 25px;
-	margin: 0 auto;
+  /* max-width: 1160px; */
+  max-width: 1260px;
+  padding: 0 25px;
+  margin: 0 auto;
 
-	/* @media (max-width: 375px) {
+  /* @media (max-width: 375px) {
 		max-width: 375px;
 		padding: 0 23px;
 	} */
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .hidden {
-	display: none;
+  display: none;
+}
+
+.margin-30 {
+  margin-bottom: 30px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.text {
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.lastText{
+  margin-bottom: 30px;
 }
 
 .title {
-  text-align: center;
   font-family: 'Cormorant Garamond', serif;
   text-transform: uppercase;
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.title--m {
+  text-transform: none;
+  font-size: 32px;
+  margin-bottom: 15px;
 }

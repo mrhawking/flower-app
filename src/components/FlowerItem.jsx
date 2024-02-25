@@ -1,4 +1,4 @@
-import { useContext, useState,  } from 'react';
+import { useContext, useState, } from 'react';
 import { Link } from 'react-router-dom';
 import Emblem from './UI/Emblem';
 import ButtonCart from './UI/ButtonCart';
@@ -6,12 +6,11 @@ import QuantityControl from './UI/QuantityControl';
 import { currencyFormatter } from './util/format';
 import FavoriteContext from '../store/FavoriteContext';
 import CartContext from '../store/CartContext';
+import Breadcrumbs from './UI/BreadCrumbs';
 import classes from './FlowerItem.module.css';
 
 
-export default function FlowerItem({currentFlower}) {
-  // const params = useParams();
-
+export default function FlowerItem({ currentFlower }) {
 
   // useEffect(() => {
   //   async function getSingleFlower() {
@@ -61,14 +60,13 @@ export default function FlowerItem({currentFlower}) {
       {error && <p>ОШИБКА</p>} */}
       <section className={classes.flowerItem}>
         <div className="container">
-          <p className={classes.breadCrumbs}>
-            <ul>
-              <li><Link to="..">Каталог</Link></li>
-            </ul>
-            <ul>
-              <li><Link to="/favorites">Избранное</Link></li>
-            </ul>
-          </p>
+          <ul className={classes.breadCrumbs}>
+            <Breadcrumbs>
+              <li><Link to="/catalog">Каталог</Link></li>
+              <span>&gt;</span>
+              <li>{currentFlower.title}</li>
+            </Breadcrumbs>
+          </ul>
           <div className={classes.flowerItemInner}>
             <div className={classes.imgWrapper}>
               <img src={currentFlower.image} alt={currentFlower.title} />

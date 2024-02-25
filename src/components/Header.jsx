@@ -3,7 +3,7 @@ import { useContext } from "react";
 import CartContext from "../store/CartContext";
 import { countFullSalePrice } from "../util/util";
 import { currencyFormatter } from "./util/format";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import classes from "./Header.module.css";
 
 export default function Header() {
@@ -19,28 +19,22 @@ export default function Header() {
             <button className={`${classes.navToggle} hidden`}><span className="visually-hidden">Open menu</span></button>
             <ul className={classes.navList}>
               <li>
-                <NavLink to="/" className={({isActive}) => isActive ? classes.active : undefined}>Каталог</NavLink>
+                <NavLink to="/catalog" className={({isActive}) => isActive ? classes.active : undefined}>Каталог</NavLink>
               </li>
               <li>
-                <a>О компании</a>
+                <NavLink to="/about" className={({isActive}) => isActive ? classes.active : undefined}>О компании</NavLink>
               </li>
               <li>
-                <a>Способы оплаты</a>
+                <NavLink to="/payment" className={({isActive}) => isActive ? classes.active : undefined}>Способы оплаты</NavLink>
               </li>
               <li>
-                <a>Доставка</a>
+                <NavLink to="/delivery" className={({isActive}) => isActive ? classes.active : undefined}>Доставка</NavLink>
               </li>
               <li>
-                <a>Отзывы</a>
+                <NavLink to="/cards" className={({isActive}) => isActive ? classes.active : undefined}>Дисконтные карты</NavLink>
               </li>
               <li>
-                <a>Дисконтные карты</a>
-              </li>
-              <li>
-                <a>Видео</a>
-              </li>
-              <li>
-                <a>Контакты</a>
+                <NavLink to="/contacts" className={({isActive}) => isActive ? classes.active : undefined}>Контакты</NavLink>
               </li>
             </ul>
           </div>
@@ -57,10 +51,10 @@ export default function Header() {
           </ul>
         </nav>
         <div className={classes.contacts}>
-          <p to="/" className={classes.logo}>
+          <Link to="/" className={classes.logo}>
             <img src={logo} alt="logo" width={206} height={42} />
             <span>сеть цветочных оптово-розничных центров</span>
-          </p>
+          </Link>
           <p className={classes.phone}><a href="tel:+79651511839"> +7 965 151 18 39</a></p>
           <p className={classes.hours}>Ждем вас с 8:00 до 22:00</p>
         </div>

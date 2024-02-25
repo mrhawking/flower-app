@@ -4,10 +4,7 @@ import classes from './catalogBlock.module.css';
 import FavoriteContext from '../../store/FavoriteContext';
 
 export default function CatalogBlock({isFetching, error, availableFlowers}) {
-
   const { favorites } = useContext(FavoriteContext);
-
-
 
   return (
     <>

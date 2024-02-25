@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classes from './Slogan.module.css';
 
 export default function Slogan() {
@@ -6,7 +7,7 @@ export default function Slogan() {
       <div className="container">
         <div className={classes.inner}>
           <p className={classes.text}>Всегда в продаже более 100 готовых дизайнерских букетов</p>
-          <a className={classes.link} href="#">Перейти в каталог &gt;</a>
+          <Link className={classes.link} to="/catalog">Перейти в каталог &gt;</Link>
         </div>
       </div>
     </div>
