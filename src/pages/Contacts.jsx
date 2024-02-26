@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import BreadCrumbs from '../components/UI/BreadCrumbs';
+import L from 'leaflet'
 import 'leaflet/dist/leaflet.css';
 import classes from './Contacts.module.css';
 import { ADDRESSES } from '../data/addresses';
+
 
 export default function Contacts() {
   return (
@@ -22,7 +24,16 @@ export default function Contacts() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {ADDRESSES.map(address => (
-              <Marker key={address.id} position={[address.lat, address.lon]}>
+              <Marker key={address.id} position={[address.lat, address.lon]} icon={L.icon({
+                iconUrl: '/leaflet/marker-icon.png',
+                iconRetinaUrl: '/leaflet/marker-icon-2x.png',
+                shadowUrl: '/leaflet/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                tooltipAnchor: [16, -28],
+                shadowSize: [41, 41],
+              })}>
                 <Popup>{address.address.street}</Popup>
               </Marker>
             ))}
