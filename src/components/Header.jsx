@@ -19,7 +19,7 @@ export default function Header() {
             <button className={`${classes.navToggle} hidden`}><span className="visually-hidden">Open menu</span></button>
             <ul className={classes.navList}>
               <li>
-                <NavLink to="/catalog" className={({isActive}) => isActive ? classes.active : undefined} end>Каталог</NavLink>
+                <NavLink to="/catalog" className={({isActive}) => isActive ? classes.active : undefined}>Каталог</NavLink>
               </li>
               <li>
                 <NavLink to="/about" className={({isActive}) => isActive ? classes.active : undefined}>О компании</NavLink>
@@ -51,7 +51,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className={classes.contacts}>
-          <Link to="/" className={classes.logo} end>
+          <Link to="/" className={classes.logo}>
             <img src={logo} alt="logo" width={206} height={42} />
             <span>сеть цветочных оптово-розничных центров</span>
           </Link>
