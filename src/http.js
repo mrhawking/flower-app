@@ -5,7 +5,6 @@ export async function fetchAvailableFlowers(query) {
     url = `${url}?${params.toString()}`
   }
 
-  console.log(url)
   const response = await fetch(url);
   const data = await response.json();
   if (!response.ok) {
@@ -27,7 +26,7 @@ export async function fetchFlower(flowerId){
 }
 
 export async function createOrder(order) {
-  const response = await fetch('http://localhost:3000/orders', {
+  const response = await fetch('https://flower-app-b21ff-default-rtdb.europe-west1.firebasedatabase.app/orders.json', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
