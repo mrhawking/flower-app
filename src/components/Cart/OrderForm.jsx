@@ -43,13 +43,11 @@ export default function OrderForm() {
       setIsLoading(true);
       try {
         await createOrder({
-        
             items: flowersCart,
             customer: {
               name: customerName,
               phone: customerPhone
             }
-          
         });
         setModalIsOpen(true);
       } catch (error) {
