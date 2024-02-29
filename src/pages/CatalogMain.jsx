@@ -7,7 +7,7 @@ export default function CatalogMainPage() {
 
   return (
     <>
-      {navigation.state === 'loading' && <Spinner />}
+      {navigation.state === "loading" && <Spinner />}
       <Catalog />
     </>
   );

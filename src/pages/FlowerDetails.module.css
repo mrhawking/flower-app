@@ -8,15 +8,11 @@ padding: 65px 0;
   gap: 65px;
 }
 
-.imgWrapper {}
-
 .imgWrapper img{
   object-fit: contain;
   height: 100%;
 }
 
-.description {
-}
 
 .title {
   margin-bottom: 20px;
@@ -32,8 +28,6 @@ padding: 65px 0;
   align-items: center;
   margin-bottom: 20px;
 }
-
-.price {}
 
 .activePrice {
   color: var(--accent-color);
@@ -78,11 +72,6 @@ padding: 65px 0;
   align-items: center;
   margin-bottom: 20px;
 }
-
-.propertiesList {
-  
-}
-
 
 .propertiesList dt{
   font-size: 20px;

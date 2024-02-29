@@ -6,8 +6,6 @@ import { fetchFlower } from '../http';
 
 export default function FavoritesPage() {
 
-  //Запросит с сервака ТОЛЬКО ТЕ карточки, которые ейсть в favorites
-  // тогда нафиг не нужен будет двойной цикл
   const [favoriteItems, setFavoriteItems] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState();
