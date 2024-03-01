@@ -4,10 +4,16 @@
 .filterForm {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   align-items: center;
   background-color: var(--accent-color-lightest);
   padding: 20px 15px;
   border-radius: 6px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 }
 
 .priceFilter {
@@ -18,6 +24,10 @@
 
 .priceFilter span {
   padding: 5px 0;
+
+  @media (max-width: 350px) {
+    display: none;
+  }
 }
 
 .inputWrapper {
@@ -39,4 +49,13 @@
   background-color: var(--accent-color);
   color: var(--main-light-100);
   border-radius: 6px;
+}
+
+.formBtn:hover,
+.formBtn:focus-visible{
+  background-color: var(--accent-color-hover);
+}
+
+.formBtn:active {
+  background-color: var(--accent-color-64);
 }

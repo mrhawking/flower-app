@@ -1,11 +1,16 @@
 .slogan {
   position: relative;
-  background-image: url("../assets/promo-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 500px;
+  height: clamp(20rem, 14.957rem + 20.69vw, 31.25rem);
   margin-bottom: 40px;
+  background-image: url("../assets/promo-bg.jpg");
+  
+  @media screen and (max-width: 450px) {
+    background-image: url("../assets//promo-bg-mobile.jpg");
+    background-position: top center;
+  }
 }
 
 .inner {
@@ -13,13 +18,18 @@
   top: 100px;
   left: 0;
   max-width: 455px;
+  width: clamp(18.125rem, 13.278rem + 19.885vw, 28.938rem);
   padding: 30px 50px 40px 50px;
   background-color: var(--main-light-90);
+
+  @media (max-width: 768px) {
+    padding: 20px 30px 30px 30px;
+  }
 }
 
 .text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 42px;
+  font-size: clamp(1.5rem, 0.996rem + 2.069vw, 2.625rem);
   font-style: italic;
   font-weight: 400;
   line-height: 1.2;

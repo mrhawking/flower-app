@@ -3,6 +3,10 @@
   padding-bottom: 60px;
 }
 
+.paymentInner {
+  padding-left: 20px;
+}
+
 .paymentList li{
   margin-bottom: 30px;
   list-style: decimal;

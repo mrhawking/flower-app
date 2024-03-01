@@ -80,51 +80,13 @@ export default function Filter({ availableFlowers, onChangeFilter }) {
         <h2 className="visually-hidden">Фильтрация товаров</h2>
         <div className={classes.priceFilter}>
           <span>Цена</span>
-          <SliderRange minPrice={minPrice} maxPrice={maxPrice} onInputChange={handleInputPriceChange} onRangeChange={handleRangePriceChange}/>
-          {/* <div className={classes.range}>
-            <label htmlFor="minPrice">от:</label>
-            <input
-              type="number"
-              id="minPrice"
-              name="minPrice"
-              value={minPrice}
-              onChange={handleInputPriceChange}
-            />
-            <label htmlFor="maxPrice">до:</label>
-            <input
-              type="number"
-              id="maxPrice"
-              name="maxPrice"
-              value={maxPrice}
-              onChange={handleInputPriceChange}
-            />
-            <div className={classes.sliderWrapper}>
-              <Slider
-                range
-                min={1}
-                max={10000}
-                value={[minPrice, maxPrice]}
-                onChange={handleRangePriceChange}
-                trackStyle={[{ backgroundColor: "#4bb45e" }]}
-                handleStyle={[{
-                  borderColor: "#4bb45e",
-                  boxShadow: "none"
-                }, {
-                  borderColor: "#4bb45e",
-                  boxShadow: "none"
-
-                }]}
-              />
-            </div>
-          </div> */}
+          <SliderRange minPrice={minPrice} maxPrice={maxPrice} onInputChange={handleInputPriceChange} onRangeChange={handleRangePriceChange} />
         </div>
         <div className={classes.sorting}>
-          <BasicSelect sortType={sortType} name="sort" id="sort" onChange={handleSortingChange}/>
+          <BasicSelect sortType={sortType} name="sort" id="sort" onChange={handleSortingChange} />
         </div>
         <div className={classes.inputWrapper}>
           <ColorCheckboxes label="Со скидкой" ref={saleRef} name="sale" id="sale" />
-        </div>
-        <div className={classes.inputWrapper}>
           <ColorCheckboxes label="Новинка" ref={newRef} name="new" id="new" />
         </div>
         <button className={classes.formBtn} type="submit">Применить</button>

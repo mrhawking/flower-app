@@ -6,6 +6,7 @@ export default function Payment() {
   return (
     <section className={classes.payment}>
       <div className="container">
+        <div className={classes.paymentInner}>
         <BreadCrumbs>
         <li><Link to="/">Главная</Link></li>
               <span>&gt;</span>
@@ -77,6 +78,7 @@ export default function Payment() {
             </ul>
           </li>
         </ol>
+        </div>
       </div>
     </section>
   );

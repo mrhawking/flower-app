@@ -19,6 +19,11 @@ margin-bottom: 30px;
   color: var(--accent-color);
   font-weight: 500;
   background-color: var(--accent-color-lightest);
+
+  @media (max-width: 550px) {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
 
 .deliveryPrice tr:nth-child(even) {
@@ -27,11 +32,12 @@ margin-bottom: 30px;
 
 .deliveryPrice td {
   padding: 10px;
+
+  @media (max-width: 550px) {
+    font-size: 12px;
+  }
 }
 
-
-.addressesList {
-}
 .addressesList li{
   margin-bottom: 15px;
   padding: 10px 20px;
@@ -40,6 +46,10 @@ margin-bottom: 30px;
   font-weight: 500;
   background-color: var(--accent-color-lightest);
   border-radius: 40px;
+
+  @media (max-width: 550px) {
+    font-size: 14px;
+  }
 }
 .addressesList li:last-child{
   margin-bottom: 0;

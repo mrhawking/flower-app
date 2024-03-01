@@ -1,6 +1,11 @@
 .footer {
   padding: 40px;
   background: linear-gradient(92deg, #317014 20.3%, #426D0D 48.62%, #095F07 79.4%);
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .footerInner {
@@ -8,6 +13,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
+
+  @media (max-width: 380px) {
+    justify-content: center;
+  }
 }
 
 .logo {
@@ -24,6 +34,10 @@
   color: var(--main-light-64);
   line-height: 1.4;
   font-size: 26px;
+
+  @media (max-width: 768px) {
+   font-size: 18px; 
+  }
 }
 
 .links {
