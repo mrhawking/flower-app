@@ -5,20 +5,37 @@
   align-items: center;
   gap: 20px;
   border-bottom: 1px solid var(--main-text-color-10);
+
+   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .imgWrapper {
   width: 100%;
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 }
 
 .imgWrapper img {
   object-fit: contain;
   width: 100%;
   max-height: 100px;
+
+  @media (max-width: 768px) {
+    max-height: 150px;
+  }
 }
 
 .deleteButton {
   background-color: transparent;
+
+  @media (max-width: 768px) {
+    order: 10;
+  }
 }
 
 

@@ -7,6 +7,9 @@
   grid-template-columns: 2fr 1fr;
   gap: 40px;
 
+  @media (max-width: 1200px) {
+    display: block;
+  }
 }
 .cartList {
   border-top: 1px solid var(--main-text-color-10);

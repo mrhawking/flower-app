@@ -31,12 +31,6 @@ export default function CartItem({ flower }) {
       <h3 className={classes.title}>
         <Link to={`/catalog/${flower.id}`}>{flower.title}</Link>
       </h3>
-      {/* <div className={classes.actions}>
-        <button onClick={handleRemove} disabled={flower.quantity === 1}>-</button>
-        <input type="text" name="count" id="count" value={flower.quantity} readOnly/>
-        <label className="visually-hidden" htmlFor="count">Количество товара</label>
-        <button onClick={handleAdd}>+</button>
-      </div> */}
       <QuantityControl item={flower} onDecrease={handleRemove} onIncrease={handleAdd} disabled={flower.quantity === 1} cartInput/>
       <p className={classes.price}>
         <span className={classes.currentPrice}>{flower.isSale ? saleFullPrice : fullCatalogPrice}</span>
