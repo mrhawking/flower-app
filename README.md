@@ -1,8 +1,22 @@
-# React + Vite
+# Онлайн магазин доставки цветов
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это мой первый самостоятельный проект на React.*(Было и страшно и страшно интересно)*
 
-Currently, two official plugins are available:
+#### Здесь я реализовала:
+* Добавление(и удаление) товаров в избранное с помощью LocalStorage
+* Фильтрацию товаров по нескольким параметрам (использование query параметров было ограничено в связи со специфичностью Firebase api)
+* Добавление товаров в корзину, удаление, изменение кол-ва
+* Небольшая валидация формы отправки данных о заказе и заказчике(данные о заказе уходят в firebase database)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Основной стек:
+* React (Context в качестве стора)
+* React Router
+* MUI
+* Firebase API
+* Vite
+
+#### На данный Момент планирую также добавить следующий функционал:
+* Регистрация и форма входа
+* Регулирование количества максимально возможного кол-ва продукта в зависимости от кол-ва на вымышленном складе
+* Анимация
+* React query
