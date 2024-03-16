@@ -4,13 +4,17 @@
 
 .flowerItemInner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 65px;
 }
 
 .imgWrapper img {
   object-fit: contain;
   height: 100%;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 }
 
 .title {
@@ -23,9 +27,15 @@
 
 .priceWrapper {
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 }
 
 
@@ -70,7 +80,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 }
 
 .propertiesList dt {
@@ -99,7 +115,6 @@
   gap: 20px;
 }
 
-
 .payment {
   display: flex;
   gap: 20px;
@@ -109,6 +124,9 @@
   padding-top: 24px;
   background-repeat: no-repeat;
   background-position: top center;
+  @media (max-width:400px) {
+    font-size: 14px;
+  }
 }
 
 .payment .cash {
@@ -122,6 +140,7 @@
 }
 
 .payment .bank {
+  white-space: nowrap;
   background-size: 24px 24px;
   background-image: url("../assets/icons/bank.svg");
 }
